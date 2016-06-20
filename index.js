@@ -25,12 +25,9 @@ shell.on('gl-render', (t) => {
   var gl = shell.gl
   shader.bind()
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
-  var res = vec2.create()
-  vec2.set(res, 512, 512)
-  shader.uniforms.iResolution = res
-  time += 0.8
+  shader.uniforms.iResolution = vec2.fromValues(512 * 2, 512 * 2)
+  time -= 0.1
   shader.uniforms.iGlobalTime = time
   shader.attributes.position.pointer()
-  shader.uniforms.t += 0.01
   gl.drawArrays(gl.TRIANGLES, 0, 3)
 })
