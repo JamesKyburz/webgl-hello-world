@@ -1,0 +1,33 @@
+{
+  "name": "webgl-hello-world",
+  "description": "webgl hello world",
+  "keywords": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jameskyburz/webgl-hello-world.git"
+  },
+  "author": {
+    "name": "James Kyburz",
+    "email": "james.kyburz@gmail.com"
+  },
+  "main": "index.js",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "NPM_ARGS=-SE budo index.js --live --open -- -p install-missing",
+    "prepublish": "standard"
+  },
+  "dependencies": {
+    "budo": "8.3.0",
+    "gl-now": "1.4.0",
+    "gl-shader": "4.2.0",
+    "gl-vec2": "1.0.0",
+    "glsl-cornell-box": "2.0.4",
+    "glsl-turntable-camera": "1.0.0",
+    "glslify": "git+ssh://git@github.com/jameskyburz/glslify.git#path-issue",
+    "install-missing": "1.1.23"
+  },
+  "devDependencies": {
+    "standard": "7.1.2"
+  },
+  "license": "MIT"
+}
