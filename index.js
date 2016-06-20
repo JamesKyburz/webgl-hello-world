@@ -1,6 +1,6 @@
 var shell = require('gl-now')()
 var createShader = require('gl-shader')
-var glsify = require('glslify')
+var glslify = require('glslify')
 var path = require('path')
 var vec2 = require('gl-vec2')
 var shader, buffer
@@ -8,8 +8,8 @@ var shader, buffer
 shell.on('gl-init', () => {
   var gl = shell.gl
   shader = createShader(gl,
-                        glsify(path.join(__dirname, '/hello.vert')),
-                        glsify(path.join(__dirname, '/hello.frag')))
+                        glslify(path.join(__dirname, '/hello.vert')),
+                        glslify(path.join(__dirname, '/hello.frag')))
   buffer = gl.createBuffer()
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
