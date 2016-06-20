@@ -1,19 +1,11 @@
-precision highp float;
- 
-uniform vec2 iResolution;
-uniform float iGlobalTime;
- 
-#pragma glslify: cornell = require('glsl-cornell-box') 
-#pragma glslify: camera = require('glsl-turntable-camera') 
- 
+precision mediump float;
+varying vec3 vNormal;
+
 void main() {
-  vec3 ro, rd;
-  float anim = sin(iGlobalTime);
-  float rot = anim*0.1;
-  float angle = anim*0.25;
-  float dist = -2.0;
-  camera(rot, angle, dist, iResolution.xy, ro, rd);
- 
-  gl_FragColor.rgb = cornell(ro, rd);
-  gl_FragColor.a = 1.0; 
+  vec3 color = vec3(0.7);
+  vec3 ambient = 0.7 * color;
+  float phong = dot(vNormal, vec3(0.71, 0.71, 0) );
+  vec3 diffuse = phong * color;
+  //gl_FragColor = vec4(ambient + diffuse, 1.0);
+  gl_FragColor = vec4(vNormal * 0.5 + 0.5, 1.0);
 }
