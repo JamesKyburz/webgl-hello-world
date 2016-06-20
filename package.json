@@ -16,6 +16,9 @@
     "start": "NPM_ARGS=-SE budo index.js --live --open -- -p install-missing",
     "prepublish": "standard"
   },
+  "browserify": {
+    "transform": ["glslify"]
+  },
   "dependencies": {
     "budo": "8.3.0",
     "gl-now": "1.4.0",
