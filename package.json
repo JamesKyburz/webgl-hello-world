@@ -17,7 +17,9 @@
     "prepublish": "standard"
   },
   "browserify": {
-    "transform": ["glslify"]
+    "transform": [
+      "glslify"
+    ]
   },
   "dependencies": {
     "budo": "8.3.0",
@@ -26,7 +28,7 @@
     "gl-vec2": "1.0.0",
     "glsl-cornell-box": "2.0.4",
     "glsl-turntable-camera": "1.0.0",
-    "glslify": "git+ssh://git@github.com/jameskyburz/glslify.git#path-issue",
+    "glslify": "5.1.0",
     "install-missing": "1.1.23"
   },
   "devDependencies": {
