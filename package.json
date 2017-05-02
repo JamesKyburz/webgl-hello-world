@@ -22,17 +22,17 @@
     ]
   },
   "dependencies": {
-    "budo": "8.3.0",
+    "budo": "10.0.3",
     "gl-now": "1.4.0",
-    "gl-shader": "4.2.0",
+    "gl-shader": "4.2.1",
     "gl-vec2": "1.0.0",
     "glsl-cornell-box": "2.0.4",
     "glsl-turntable-camera": "1.0.0",
-    "glslify": "5.1.0",
-    "install-missing": "1.1.23"
+    "glslify": "6.0.2",
+    "install-missing": "1.1.51"
   },
   "devDependencies": {
-    "standard": "7.1.2"
+    "standard": "10.0.2"
   },
   "license": "MIT"
 }
